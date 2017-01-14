@@ -6,7 +6,7 @@
   <extension point="xbmc.ui.screensaver" library="screensaver.py" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Screensaver turning off a Panasonic TV</summary>
-    <description lang="en">This screensaver add-on automatically turns off a Panasonic TV when the screensaver activates. Make sure to create a settings.xml file to configure the TV hostname.</description>
+    <description lang="en">This screensaver add-on automatically turns off a Panasonic TV when the screensaver activates.</description>
     <license>Apache License 2.0</license>
     <language>en</language>
     <source>https://github.com/flavien/screensaver.panasonic/</source>

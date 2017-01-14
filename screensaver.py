@@ -17,10 +17,8 @@ import xbmcgui
 import xbmc
 import os
 import panasonic_viera
-import xml.etree.ElementTree
 
 addon = xbmcaddon.Addon()
-addonName = addon.getAddonInfo("name")
 addonPath = addon.getAddonInfo("path")
 addonId = addon.getAddonInfo("id")
 
@@ -38,7 +36,7 @@ class Screensaver(xbmcgui.WindowXMLDialog):
         self.log("Start Screensaver")
         self.exit_monitor = self.ExitMonitor(self.exit)
 
-        rc = self.create_remote_control()
+        rc = panasonic_viera.RemoteControl(addon.getSetting("hostname"))
 
         rc.turn_off()
 
@@ -46,11 +44,6 @@ class Screensaver(xbmcgui.WindowXMLDialog):
         self.exit_monitor = None
         self.close()
         self.log("Stop Screensaver")
-
-    def create_remote_control(self):
-        file_path = xbmc.translatePath("special://userdata/addon_data/{addon}/settings.xml".format(addon = addonId))
-        root = xml.etree.ElementTree.parse(file_path).getroot()
-        return panasonic_viera.RemoteControl(root.find("host").text)
 
     def log(self, msg):
         xbmc.log(u"%(name)s: %(message)s" % {"name": addonId, "message": msg})

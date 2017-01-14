@@ -6,16 +6,7 @@ This Kodi screensaver add-on turns off a Panasonic TV when it activates.
 Instructions
 ------------
 
-Before using this screensaver, you must configure the hostname of the TV. Create a ``settings.xml`` file in the ``userdata\addon_data\screensaver.panasonic`` folder with the following content:
-
-```
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<settings>
-  <host>HOSTNAME</host>
-</settings>
-```
-
-Replace ``HOSTNAME`` with the hostname of the TV, for example ``192.168.0.10``.
+Before using this screensaver, you must configure the IP address of the TV in the screensaver settings.
 
 License
 -------
