@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
-  <category label="General">
-    <setting label="TV IP address" type="ipaddress" id="hostname" default="127.0.0.1"/>
+  <category>
+    <setting label="TV IP Address" type="ipaddress" id="hostname" default="127.0.0.1"/>
   </category>
 </settings>
