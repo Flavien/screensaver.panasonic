@@ -36,9 +36,12 @@ class Screensaver(xbmcgui.WindowXMLDialog):
         self.log("Start Screensaver")
         self.exit_monitor = self.ExitMonitor(self.exit)
 
-        rc = panasonic_viera.RemoteControl(addon.getSetting("hostname"))
+        rc = panasonic_viera.RemoteControl(addon.getSetting("hostname"), addon.getSetting("port"))
 
-        rc.turn_off()
+        try:
+            rc.turn_off()
+        except:
+            self.log("Could not turn off the TV")
 
     def exit(self):
         self.exit_monitor = None

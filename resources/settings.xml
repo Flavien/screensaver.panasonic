@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
   <category>
-    <setting label="TV IP Address" type="ipaddress" id="hostname" default="127.0.0.1"/>
+    <setting label="TV IP Address" type="text" id="hostname" default="127.0.0.1"/>
+    <setting label="Port" type="number" id="port" default="55000"/>
   </category>
 </settings>
